@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken";
 import { db } from "./api_database.js";
 import express from "express";
 import fs from "fs";
-import { __rootPath } from "../server.js";
+import { __rootPath } from "./server.js";
 
 export const router = express.Router();
 

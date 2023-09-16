@@ -2,7 +2,7 @@ import { db } from "./api_database.js";
 import express from "express";
 import htmlToPdf from "html-pdf";
 import fs from "fs";
-import { __rootPath } from "../server.js";
+import { __rootPath } from "./server.js";
 export const router = express.Router();
 
 router.get(`/note/delete-all-archived`, async (req, res) => {

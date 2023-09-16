@@ -1,8 +1,8 @@
 import express from "express";
 import compression from "compression";
 import helmet from "helmet";
-import { authMW, router as routerAuth } from "./api/api_auth.js";
-import { router as routerNote } from "./api/api_note.js";
+import { authMW, router as routerAuth } from "./api_auth.js";
+import { router as routerNote } from "./api_note.js";
 import crypto from "crypto";
 import nunjucks from "nunjucks";
 import { fileURLToPath } from "url";
@@ -12,7 +12,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const __filePath = fileURLToPath(import.meta.url);
-export const __rootPath = dirname(__filePath);
+export const __rootPath = dirname(dirname(__filePath));
 
 const app = express();
 

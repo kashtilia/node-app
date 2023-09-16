@@ -4,11 +4,11 @@
   "author": "Ilia Kashtanov",
   "description": "",
   "keywords": [],
-  "main": "index.js",
+  "main": "api/server.js",
   "type": "module",
   "scripts": {
-    "start": "cross-env npm run db:migrate && node server.js",
-    "dev": "killall node && cross-env npm run db:migrate && nodemon server.js -e js,njk",
+    "start": "cross-env npm run db:migrate && node api/server.js",
+    "dev": "killall node && cross-env npm run db:migrate && nodemon api/server.js -e js,njk",
     "test": "echo \"Tests passed\" && exit 0",
     "build": "rimraf public/bundle.* && rollup --config",
     "db:migrate": "knex migrate:latest"
