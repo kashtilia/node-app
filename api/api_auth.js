@@ -64,10 +64,8 @@ router.get("/login", (req, res) => {
     return res.redirect("/");
   }
 
-  // const authError = req.query.error ? authErrors[req.query.error] : null;
-  return res.render("index",
-    // { authError }
-  );
+  const authError = req.query.error ? authErrors[req.query.error] : null;
+  return res.render("index", { authError });
 });
 
 router.post("/login", async (req, res) => {
