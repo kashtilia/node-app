@@ -3,6 +3,7 @@
     {
       "source": "/(.*)",
       "destination": "/api/server"
-    }
+    },
+    { "source": "/views", "destination": "/views" }
   ]
 }

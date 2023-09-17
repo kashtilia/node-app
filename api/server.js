@@ -19,13 +19,13 @@ const app = express();
 const generateNonce = () => crypto.randomBytes(16).toString("base64");
 const nonce = generateNonce();
 
-nunjucks.configure(`${__rootPath}/api/views`, {
+nunjucks.configure(`${__rootPath}/views`, {
   autoescape: true,
   express: app,
 });
 
 app.set("view engine", "njk");
-app.set("views", `${__rootPath}/api/views`);
+app.set("views", `${__rootPath}/views`);
 app.use("/", express.static(`${__rootPath}/public`));
 app.use(compression());
 app.use(helmet());
